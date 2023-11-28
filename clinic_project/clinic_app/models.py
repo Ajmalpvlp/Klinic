@@ -16,7 +16,7 @@ class Depatrments(models.Model):
         return self.dep_name 
 
 class Doctorlist(models.Model):
-    img= models.ImageField(upload_to='img')
+    img= models.ImageField(upload_to='dr_uploads')
     doc_name= models.CharField(max_length= 100)
     doc_spec = models.CharField(max_length=100, null=True)
     doc_dep= models.ForeignKey(Depatrments, on_delete=models.CASCADE)
